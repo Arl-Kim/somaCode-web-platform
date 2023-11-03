@@ -8,11 +8,13 @@
         <meta name="author" content="Ra'Asis">
         <meta http-equiv="refresh" content="420">
         <title>JavaScript Tutorial</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
         <link rel="stylesheet" href="styles.css">
-        <script type="text/javascript" src="scripts.js"></script>
-        <body>
+    </head>
+    <body>
             <!-----------HEADER SECTION BEGINS------------->
             <header>
+                <a name="scrolltop"></a>
                 <div class="top-header">
                     <div class="logo">
                         <a href="home.html"><img src="images/sunblue_clear.png" alt="Ra'Asis Logo" width="200" height="200"></a>
@@ -40,6 +42,10 @@
                             <li><a href="javascript.html">Learn JavaScript</a></li>
                             <li><a href="php.html">Learn Hypertext Preprocessor</a></li>
                         </ul>
+                        <div class="theme-toggler">
+                            <span class="material-icons-sharp">light_mode</span>
+                            <span class="material-icons-sharp active">dark_mode</span>
+                        </div>
                     </div>
             </header>
             <!------------HEADER SECTION ENDS---------------->
@@ -48,14 +54,25 @@
 
             <div class="container">
                 <div class="js-demo">
-                    <script type="text/javascript">
-                        document.write("This Is A JavaScript Demo!");
-                    </script><br><br>
-                    <button type="button" id="get_started" onclick="firstAlert()">I Am LiveScript<img src="images/javascript_icon.png" width="40px" height="40px"></button><br><br>
+                    
+                    <h1 id="welcome">Hello There, Want To Learn Javascript?😃</h1>
 
-                    <button type="button" id="get_started" onclick="collectFeed()">Leave Feedback<img src="images/javascript_icon.png" width="40px" height="40px"></button><br><br>
-
-                    <button type="button" id="get_started" onclick="redirectClick()">Go To Ra'Asis Main<img src="images/javascript_icon.png" width="40px" height="40px"></button>
+                    <button type="button" id="get_started" onclick="changePara()">Click Me To See Js In Action!<img src="images/javascript_icon.png" width="40px" height="40px"></button><br><br>
+                    <div class="circle">
+                        <div class="circle-left">
+                            <h2 id="circle">Now Let Us Calculate the area of this circle using some simple JS</h2>
+                            <button type="button" id="get_started" onclick="circleArea()">Calculate Area<img src="images/javascript_icon.png" width="40px" height="40px"></button>
+                        </div>
+                        <div class="circle_right">
+                            <img src="images/orange_circle.png" alt="an orange circle" style="border-radius: 50%;">
+                        </div>
+                    </div>
+                   <hr>
+                   <div class="age">
+                    <h2>Now let us try out a simple age calculator</h2>
+                    <button type="button" id="get_started" onclick="ageCalc()">Click Here To Get Started<img src="images/javascript_icon.png" width="40px" height="40px"></button>
+                    <h1 id="result"></h1>
+                   </div> 
                 </div>
             </div>
 
@@ -116,14 +133,20 @@
                                 <a href="https://api.whatsapp.com/send?phone=2540742807455&text=Hello%20Ra'Asis%20Software%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website." target="_blank"><img src="images/whatsapp-logo.png" alt="whatsapp"></a>
                                 <a href="https://www.instagram.com/ra_asis_software/" target="_blank"><img src="images/instagram-logo.png" alt="instagram"></a>
                                 <a href="https://twitter.com/ra_asis_SW" target="_blank"><img src="images/twitter-logo.png" alt="twitter"></a>
-                            </div>
-                            <div class="terms">
-                                <h6>Term Of Use || Privacy Policy</h6>
-                            </div>
                         </div>
-                    </div>                  
-                </div>
-            </footer>
-        </body>
-    </head>
+                        <div class="terms">
+                            <h6>Term Of Use || Privacy Policy</h6>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </footer>
+        <a href="#scrolltop" style="text-decoration: none;">
+            <div class="scroller hover-div">
+                <span id="scroll">^</span>
+            </div>
+        </a>
+        <!---------------FOOTER SECTION ENDS---------------->
+        <script src="scripts.js"></script>
+    </body>
 </html>

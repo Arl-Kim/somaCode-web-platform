@@ -8,9 +8,12 @@
         <meta name="author" content="Ra'Asis">
         <meta http-equiv="refresh" content="60">
         <title>HTML5 Tutorial</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
         <link rel="stylesheet" href="styles.css">
+    </head>
         <body>
             <header>
+                <a name="scrolltop"></a>
                 <!------------HEADER SECTION BEGINS---------------->
                 <div class="top-header">
                     <div class="logo">
@@ -39,17 +42,14 @@
                             <li><a href="javascript.html">Learn JavaScript</a></li>
                             <li><a href="php.html">Learn Hypertext Preprocessor</a></li>
                         </ul>
+                        <div class="theme-toggler">
+                            <span class="material-icons-sharp">light_mode</span>
+                            <span class="material-icons-sharp active">dark_mode</span>
+                        </div>
                     </div>
             </header>
             <!------------HEADER SECTION ENDS---------------->
-            <a href="#safaricom"><img src="perfomance.jpg" width="500" height="300" alt="img of girl"></a>
-            <br>
-            <img src="mail red.png" width="500" height="300">
-            <hr>
-            <a href="css.html">go to css</a>
-            <br>
-            <a href="https://www.google.com">go to google</a>
-            <a href="https://web.facebook.com">go to facebook</a>
+        
 
             <!-----------------FOOTER SECTION BEGINS------------------->
             <footer>
@@ -61,9 +61,9 @@
                         <div class="learn-text">
                             <p> Learning has never been this fun and insightful! Ra'Asis somaCode  is meticulously designed for optimal learning and training.</p>
                         </div>
-                        <div class="enroll_student">
+                        <div class="enroll-student">
                             <form class="subscribe" action="">
-                                <a name="safaricom"><label for="email-input">Subscribe For Weekly Tech Insights</label></a>
+                                <label for="email-input">Subscribe For Weekly Tech Insights</label>
                                 <input type="e-mail" id="email-input" placeholder="Your E-mail Address" size="22" required><button type="submit" id="subscribe">Subscribe</button><br>
                                 <small>*Your Personal Info Will Remain Confidential</small>
                             </form>
@@ -113,6 +113,12 @@
                     </div>
                 </div>
             </footer>
+            <a href="#scrolltop" style="text-decoration: none;">
+                <div class="scroller hover-div">
+                    <span id="scroll">^</span>
+                </div>
+                </a>
+                <!---------------FOOTER SECTION ENDS---------------->
+            <script src="scripts.js"></script>
         </body>
-    </head>
 </html>

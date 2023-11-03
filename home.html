@@ -8,12 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="refresh" content="420">
         <title>Ra'Asis SomaCode</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
         <link rel="stylesheet" href="styles.css">
     </head>
 <body>
     <!-----------HEADER SECTION BEGINS------------->
     <header>
+        <a name="scrolltop"></a>
         <div class="top-header">
         <div class="logo">
             <a href="home.html"><img src="images/sunblue_clear.png" alt="Ra'Asis Logo" width="200" height="200"></a>
@@ -41,6 +42,10 @@
                 <li><a href="javascript.html" class="active">Learn JavaScript</a></li>
                 <li><a href="php.html" class="active">Learn Hypertext Preprocessor</a></li>
             </ul>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp">light_mode</span>
+                <span class="material-icons-sharp active">dark_mode</span>
+            </div>
         </div>
     </header><hr>
     <!------------HEADER SECTION ENDS---------------->
@@ -218,7 +223,7 @@
                     </div>
                 </div>
                 <div class="in-touch">
-                    <a href="#intouch"><button type="button" id="get_started">Get In Touch</button></a>     
+                    <a href="#intouch"><button type="button" id="in_touch">Get In Touch</button></a>     
                 </div>
             </div>
         </div>
@@ -260,41 +265,44 @@
                 <a name="intouch"><h1>have any questions about SomaCode? let's answer them</h1></a>
             </div>
             <div class="form-area">
-                <form action="">
+                <form>
                     <div class="top-row">
                         <div class="inside">
-                            <label for="name">Name<span>*</span></label><br>
-                            <input type="text" id="name" required>
+                            <label for="name" id="namelab">Name<span>*</span></label><br>
+                            <input type="text" id="name" class="alertfocus"><br>
+                            <small id="namefield_alert" role="alert" class="myalert"></small>
                         </div>
-                        <div class="inside">
+                        <div class="inside" id="phonelab">
                             <label for="phone">Phone Number<span>*</span></label><br>
-                            <input type="tel" id="phone" required>
+                            <input type="tel" id="phone" class="alertfocus"><br>
+                            <small id="telfield_alert" role="alert" class="myalert"></small>
                         </div>
-                        <div class="inside">
+                        <div class="inside" id="emaillab">
                             <label for="email">E-Mail Address<span>*</span></label><br>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" class="alertfocus"><br>
+                            <small id="mailfield_alert" role="alert" class="myalert"></small>
                         </div>
                     </div><br><br><br>
                     <div class="middle-row">
                         <div class="inside">
-                            <label for="subject">Subject<span>*</span></label><br>
-                            <input type="text" id="subject" required>
+                            <label for="subject" id="subjectlab">Subject<span>*</span></label><br>
+                            <input type="text" id="subject" class="alertfocus"><br>
+                            <small id="subfield_alert" role="alert" class="myalert"></small>
                         </div><br><br><br>
                         <div class="inside">
-                            <label for="message">Your Message<span>*</span></label><br>
-                            <textarea name="message" id="message" cols="30" rows="10">
-
-                            </textarea>
+                            <label for="message" id="messagelab">Your Message<span>*</span></label><br>
+                            <textarea id="message" class="alertfocus" cols="32" rows="10"></textarea><br>
+                            <small id="textbox_alert" role="alert" class="myalert"></small>
                         </div>
                     </div>
                     <div class="button-row">
-                        <button type="submit" id="get_started">Send Your Message</button>
+                        <button type="button" id="submit_btn" onclick="formHandler()">Send Your Message</button>
                     </div>
                 </form>
             </div>   
         </div>
     </div><hr/>
-    <!--------------MAIN CONTENT ARE ENDS---------->
+    <!--------------MAIN CONTENT AREA ENDS---------->
 
     <!----------FOOTER SECTION BEGINS-------------->
     <footer>      
@@ -358,6 +366,12 @@
             </div>
         </div>
     </footer>
+    <a href="#scrolltop" style="text-decoration: none;">
+    <div class="scroller hover-div">
+        <span id="scroll">^</span>
+    </div>
+    </a>
     <!---------------FOOTER SECTION ENDS---------------->
+    <script src="scripts.js"></script>
 </body>
 </html>

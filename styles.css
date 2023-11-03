@@ -18,6 +18,40 @@ Large devices (laptops/desktops, 992px and up)
 **/
 
 
+
+/**************ROOT VARIABLES*****************/
+
+:root{
+    --color-topheadings: #48839e;
+    --color-lowerheadings: #d78129;
+    --color-paragraphs: #fff;
+    --color-button: #163153;
+    --background-image: url("images/deep_blue_canvas.png");
+    --btbg-color: #d78219;
+    --btbghover-color: #48839e;
+    --color-hoveractive: #e9bc77;
+    --color-boxshadow: #0071bc;
+    --color-spheadings: #d78219;
+    --color-hoverdivbg: #163153;
+    --opacity-hoverdiv: 0.7;
+    --color-hr: #48839e;
+}
+
+/***************LIGHT THEME VARIABLES*****************/
+
+.light-theme{
+    --background-image: url("images/orange_canvas.png");
+    --color-topheadings: #163153;
+    --color-lowerheadings: #fff;
+    --color-paragraphs: #0071bc;
+    --color-boxshadow: #e9bc77;
+    --color-spheadings: #163153;
+    --color-hoverdivbg: #d78219;
+    --opacity-hoverdiv: 1;
+    --color-hr: #e9bc77;
+}
+
+
 /******GENERAL DOC STYLES*******/
 
 html{
@@ -30,12 +64,12 @@ header{
     background-attachment: fixed;
     border-radius: 20px;
     font-family: "Trebuchet MS";
-    box-shadow: 0 0 20px #0071bc;
+    box-shadow: 0 0 20px var(--color-boxshadow);
 }
 
 body{
     font-family: "Trebuchet MS";
-    background-image: url("images/deep_blue_canvas.png");
+    background-image: var(--background-image);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -48,31 +82,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-    color: #48839e;
+    color: var(--color-topheadings);
 }
 
 h2{
-    color: #48839e;
+    color: var(--color-topheadings);
 }
 
 h3, h4, h5{
-    color: #d78129;
+    color: var(--color-lowerheadings);
     text-align: left;
 }
 
 p{
-    color: #fff;
+    color: var(--color-paragraphs);
     text-align: justify;
 }
 
 hr{
-    color: #48839e;
+    color: var(--color-hr);
 }
 
 img, video{
     border-radius: 20px;
 }
 
+.scroller{
+    display: flex;
+    justify-content: space-between;
+    width: 47.2px;
+    height: 47.2px;
+    cursor: pointer;
+    border: 5px double #163153;
+    border-radius: 10px;
+    transform: background 500ms ease-in-out;
+    position: sticky;
+    bottom: 0;
+    margin-top: -55px;
+}
+
+#scroll{
+    font-size: 27px;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e9bc77;
+    font-weight: 900;
+}
 /************MAIN CONTENT AREA STYLES***************/
 .intro{
   display: grid;
@@ -86,9 +145,9 @@ img, video{
     margin: 40px 7px 0 40px;
 }
 
-#get_started{
-    color: #163153;
-    background: #d78129;
+#get_started, #in_touch, #submit_btn{
+    color: var(--color-button);
+    background: var(--btbg-color);
     padding: 20px 40px 20px 40px;
     border: 3px double #163153;
     border-top-right-radius: 15px;
@@ -107,11 +166,11 @@ img, video{
     transition-timing-function: ease-out;
 }
 
-#get_started:hover{
+#get_started:hover, #in_touch:hover, #submit_btn:hover{
     opacity: 1;
-    background: #48839e;
+    background: var(--btbghover-color);
     cursor: pointer;
-    color: #163153;
+    color: var(--color-button);
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
 }
@@ -126,7 +185,7 @@ img, video{
 }
 
 .services-heading > h2{
-    color: #d78129;
+    color: var(--color-spheadings);
 }
 
 .services{
@@ -146,10 +205,10 @@ img, video{
 }
 
 .hover-div:hover{
-    background: #163153;
-    opacity: 0.7;
+    background: var(--color-hoverdivbg);
+    opacity: var(--opacity-hoverdiv);
     cursor: pointer;
-    box-shadow: 0 0 40px #0071bc;
+    box-shadow: 0 0 40px var(--color-boxshadow);
     border-color: #48839e;
 }
 
@@ -274,7 +333,7 @@ img, video{
 
 .num > span{
     font-size: 50px;
-    color: #d78129;
+    color: var(--color-spheadings);
     font-weight: 900;
 }
 
@@ -376,7 +435,7 @@ img, video{
 }
 
 .inside > input{
-    padding: 20px 70px 20px 70px;
+    padding: 20px 70px 20px 50px;
     border-radius: 10px;
     border: none;
     background: #48839e;
@@ -387,11 +446,11 @@ img, video{
 }
 
 #subject{
-    padding: 20px 800px 20px 70px;
+    padding: 20px 800px 20px 50px;
 }
 
 #message{
-    padding: 20px 725px 20px 70px;
+    padding: 20px 725px 20px 50px;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -404,6 +463,7 @@ img, video{
     margin-top: 70px;
     margin-left: 500px;
 }
+
 
 /**Styles For Page ID #css001**/
 .bounce-animation{
@@ -455,6 +515,21 @@ img, video{
     color: #d78129;
 }
 
+/**Styles For Page ID #js001**/
+.circle{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 100px;
+}
+
+.circle-left > button{
+    margin-top: 100px;
+}
+
+.age{
+    margin-top: 70px;
+}
+
 /************MAIN CONTENT AREA STYLES ENDS***************/
 
 /*******HEADER STYLES******/
@@ -475,6 +550,34 @@ img, video{
     float: left;
 }
 
+.theme-toggler{
+    background: var(--btbg-color);
+    display: flex;
+    justify-content: space-between;
+    width: 67.2px;
+    height: 25.6px;
+    cursor: pointer;
+    border: 3px double #e9bc77;
+    border-radius: 10px;
+}
+
+.theme-toggler span{
+    font-size: 27px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-button);
+}
+
+.theme-toggler span.active{
+    background: var(--color-hoveractive);
+    color: #0071bc;
+    border-radius: 8px;
+}
+
+
 .socials > a > img{
     width: 20px;
     height: 20px;
@@ -491,7 +594,7 @@ img, video{
     font-family: "Trebuchet MS";
     font-weight: 800;
     font-size: 19px;
-    box-shadow: 0 0 20px #0071bc;
+    box-shadow: 0 0 20px var(--color-boxshadow);
 }
 
 #nav{
@@ -517,10 +620,6 @@ img, video{
     border-top: 4px double #e9bc77;
     border-radius: 10px;
     padding: 10px;
-}
-
-a.active{
-    color: #48839e;
 }
 
 #second_nav{
@@ -562,7 +661,7 @@ a.active{
     background-repeat: no-repeat;
     background-attachment: fixed;
     border-radius: 20px;
-    box-shadow: 0 0 20px #0071bc;
+    box-shadow: 0 0 20px var(--color-boxshadow);
 }
 
 .left{
@@ -586,7 +685,7 @@ a.active{
 }
 
 #email-input{
-    padding: 16.5px;
+    padding: 12px;
     background: #48839e;
     border-radius: 10px;
     border-top-right-radius: 0px;
@@ -607,7 +706,7 @@ a.active{
 }
 
 #subscribe{
-    padding: 16.5px;
+    padding: 12px;
     border-radius: 10px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;

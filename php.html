@@ -8,10 +8,13 @@
         <meta name="author" content="Ra'Asis">
         <meta http-equiv="refresh" content="60">
         <title>PHP Tutorial</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
         <link rel="stylesheet" href="styles.css">
+    </head>
         <body>
             <!-----------HEADER SECTION BEGINS------------->
             <header>
+                <a name="scrolltop"></a>
                 <div class="top-header">
                     <div class="logo">
                         <a href="home.html"><img src="images/sunblue_clear.png" alt="Ra'Asis Logo" width="200" height="200"></a>
@@ -39,6 +42,10 @@
                             <li><a href="javascript.html">Learn JavaScript</a></li>
                             <li><a href="php.html">Learn Hypertext Preprocessor</a></li>
                         </ul>
+                        <div class="theme-toggler">
+                            <span class="material-icons-sharp">light_mode</span>
+                            <span class="material-icons-sharp active">dark_mode</span>
+                        </div>
                     </div>
             </header>
             <!------------HEADER SECTION ENDS---------------->
@@ -106,6 +113,12 @@
                     </div>
                 </div>
             </footer>
+            <a href="#scrolltop" style="text-decoration: none;">
+                <div class="scroller hover-div">
+                    <span id="scroll">^</span>
+                </div>
+            </a>
+            <!---------------FOOTER SECTION ENDS---------------->
+            <script src="scripts.js"></script>
         </body>
-    </head>
 </html>
