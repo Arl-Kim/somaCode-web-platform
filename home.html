@@ -51,7 +51,7 @@
     <!------------HEADER SECTION ENDS---------------->
 
     <!-----------MAIN CONTENT AREA BEGINS--------->
-    <div class="container">
+    <div class="container" id="main_cont">
         <div class="intro">
             <div class="intro-left">
                 <em><h5 style="margin-bottom: 20px;">~ Technology From The Future ~</h5></em>
@@ -60,7 +60,7 @@
                     Welcome to The Ra'Asis somaCode Platform, where coding meets creativity in a fun and engaging atmosphere! 🌟 Whether you're a coding newbie or a tech enthusiast, our platform offers a range of exciting learning sections, from HTML, CSS & JavaScript to Python and Java. Uncover the secrets of coding magic, experiment with dynamic languages, and turn your ideas into digital masterpieces. With our user-friendly approach featuring a number of engaging exercises and scenarios, you'll be amazed at how coding becomes an adventure.<br><br> Join us on this exciting journey, and let's craft a world of innovation together!
                     We will transform businesses of most major sectors with powerful and adaptable digital solutions that satisfy the needs of today.
                 </p>
-                <a href="#"><button type="button" id="get_started">Start Learning</button></a>
+                <a href="#"><button type="button" class="main-btn" id="get_started">Start Learning</button></a>
             </div>
             <div class="intro-right">
                 <div class="slideshow">
@@ -166,8 +166,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="button">
-                    <a href="#"><button type="button" id="get_started">Start Learning</button></a>
+                <div class="after-desc">
+                    <a href="#"><button type="button" class="main-btn" id="get_started">Start Learning</button></a>
                 </div>
             </div>
             <div class="about-right">
@@ -223,7 +223,7 @@
                     </div>
                 </div>
                 <div class="in-touch">
-                    <a href="#intouch"><button type="button" id="in_touch">Get In Touch</button></a>     
+                    <a href="#intouch"><button type="button" class="main-btn" id="in_touch">Get In Touch</button></a>     
                 </div>
             </div>
         </div>
@@ -265,7 +265,7 @@
                 <a name="intouch"><h1>have any questions about SomaCode? let's answer them</h1></a>
             </div>
             <div class="form-area">
-                <form>
+                <form id="contact-us" method="POST">
                     <div class="top-row">
                         <div class="inside">
                             <label for="name" id="namelab">Name<span>*</span></label><br>
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                     <div class="button-row">
-                        <button type="button" id="submit_btn" onclick="formHandler()">Send Your Message</button>
+                        <button type="button" class="main-btn" id="submit_btn" onclick="formHandler()">Send Your Message</button>
                     </div>
                 </form>
             </div>   
@@ -367,7 +367,7 @@
         </div>
     </footer>
     <a href="#scrolltop" style="text-decoration: none;">
-    <div class="scroller hover-div">
+    <div class="scroller hover-div" id="top_scroller">
         <span id="scroll">^</span>
     </div>
     </a>

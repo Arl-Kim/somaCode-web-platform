@@ -26,7 +26,7 @@ Large devices (laptops/desktops, 992px and up)
     --color-lowerheadings: #d78129;
     --color-paragraphs: #fff;
     --color-button: #163153;
-    --background-image: url("images/deep_blue_canvas.png");
+    --background-image: url("images/dark_mode_canvas.png");
     --btbg-color: #d78219;
     --btbghover-color: #48839e;
     --color-hoveractive: #e9bc77;
@@ -63,12 +63,12 @@ header{
     background-size: contain;
     background-attachment: fixed;
     border-radius: 20px;
-    font-family: "Trebuchet MS";
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     box-shadow: 0 0 20px var(--color-boxshadow);
 }
 
 body{
-    font-family: "Trebuchet MS";
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     background-image: var(--background-image);
     background-size: cover;
     background-attachment: fixed;
@@ -77,7 +77,7 @@ body{
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: capitalize;
-    font-family: 'Trebuchet MS';
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: 800;
 }
 
@@ -132,6 +132,12 @@ img, video{
     color: #e9bc77;
     font-weight: 900;
 }
+
+/***
+#top_scroller.hidden{
+    display: none;
+}
+***/
 /************MAIN CONTENT AREA STYLES***************/
 .intro{
   display: grid;
@@ -145,7 +151,7 @@ img, video{
     margin: 40px 7px 0 40px;
 }
 
-#get_started, #in_touch, #submit_btn{
+.main-btn{
     color: var(--color-button);
     background: var(--btbg-color);
     padding: 20px 40px 20px 40px;
@@ -166,7 +172,7 @@ img, video{
     transition-timing-function: ease-out;
 }
 
-#get_started:hover, #in_touch:hover, #submit_btn:hover{
+.main-btn:hover{
     opacity: 1;
     background: var(--btbghover-color);
     cursor: pointer;
@@ -252,7 +258,7 @@ img, video{
     margin-top: 15px;
 }
 
-.button{
+.after-desc{
     margin-top: 70px;
     margin-left: 150px;
 }
@@ -429,12 +435,12 @@ img, video{
     margin-left: 100px;
 }
 
-.inside > label{
+.inside > label, label{
     color: #d78129;
     font-weight: 800;
 }
 
-.inside > input{
+.inside > input, #radius_input{
     padding: 20px 70px 20px 50px;
     border-radius: 10px;
     border: none;
@@ -591,7 +597,7 @@ img, video{
     padding: 20px;
     border-radius: 20px;
     text-align: center;
-    font-family: "Trebuchet MS";
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: 800;
     font-size: 19px;
     box-shadow: 0 0 20px var(--color-boxshadow);
@@ -826,4 +832,4 @@ small{
     cursor: pointer;
 }
 
-/**************FOOTER STYLES END*****************/
+/**************FOOTER STYLES END****************
